@@ -14,7 +14,7 @@ export class WebRequestService {
     //localhost testing
     // this.ROOT_URL = 'http://localhost/BACK-END/hud.php';  
     //hosting site url
-    this.ROOT_URL = 'http://www.garymcflarry.com/hud.php'
+    this.ROOT_URL = 'https://www.garymcflarry.store/hud.php'
   }
 
   //Function for POST HTTP requests
