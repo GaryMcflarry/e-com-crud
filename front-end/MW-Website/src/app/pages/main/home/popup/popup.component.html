@@ -1,0 +1,55 @@
+<!-- Subcribing to the product observable -->
+<ng-container *ngIf="product$ | async as product">
+
+    <div class="grid bg-secondary noScroll" style="z-index: 1001;">
+
+        <div class="col-4 col-12-xs col-12-sm col-12-md col-4-lg col-4-xl">
+            <img class="popImg" [src]="product.data.image">
+        </div>
+
+        <div class="col-12-xs col-12-sm col-12-md col-8-lg col-8-xl">
+
+            <div class="grid" style="padding: 2rem;">
+                <h2 class="col-12 textL text-m">{{product.data.name}}</h2>
+                <hr class="col-12">
+
+                <!-- HTML code to cater if a product has a discount or not -->
+                <ng-container *ngIf="product.data.discount !== '0', else base">
+
+                    <p class="col-12 textL"> R{{product.data.newPrice | number: '1.2-2'}} | <span class="oldText">
+                            R{{product.data.price}} </span><span class="dealText">{{product.data.discount}} % off
+                        </span></p>
+
+                </ng-container>
+
+                <ng-template #base>
+
+                    <p class="col-12 textL">R{{product.data.price}}</p>
+
+                </ng-template>
+
+                <p class="col-12 textS text-m">{{product.data.quantity}} items in stock</p>
+                <hr class="col-12">
+
+                <div class="col-12 space">
+
+                    <p class="textS text-m ratingText"><img src="assets/images/ratingStar.png"
+                            class="ratingImg">{{product.data.rating | number: '1.1-1'}}</p>
+
+                </div>
+
+                <div class="col-12 center" style="margin-top: 3rem;" (click)="addToCart(product.data.productID)">
+
+                    <button class="col-12 button button-primary cartBut center">
+                        +<i class="pi pi-shopping-cart icon pointer"></i>
+                        Add to Cart</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</ng-container>

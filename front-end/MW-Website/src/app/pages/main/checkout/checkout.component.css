@@ -1,0 +1,204 @@
+.titleDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+.title {
+  color: black;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.titleImg {
+  width: 4rem;
+}
+.rTitleImg {
+  width: 4rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+/* ================================================================================= */
+.productDiv {
+  background-color: #ffffff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0px;
+  width: 95%;
+  justify-self: center;
+  height: 8rem;
+}
+.productDivList {
+  background-color: #f3f0f0;
+  overflow-y: scroll;
+  height: 30rem;
+  align-self: center;
+  margin: 0 1rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+}
+.productPanel {
+  width: 100%;
+}
+.productImg {
+  width: 8rem;
+}
+/* ================================================================================= */
+.text {
+  color: black;
+  font-weight: bold;
+  margin: 0;
+}
+.textL {
+  color: black;
+  font-weight: bold;
+  font-size: large;
+  margin: 0;
+}
+.greyTextS {
+  color: grey;
+  font-weight: bold;
+  font-size: x-small;
+  margin: 0px;
+}
+.productBut {
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  margin-top: 1rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+input {
+  height: 1rem;
+  width: 3rem;
+  text-align: center;
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+/* ================================================================================= */
+.addUpDiv {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+/* ================================================================================= */
+.checkoutDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: 30rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.checkoutSmDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.checkoutDisplayTxt {
+  color: black;
+  font-size: large;
+  font-weight: bold;
+}
+.checkoutDisplayGTxt {
+  color: grey;
+  font-size: medium;
+  font-weight: bold;
+}
+.checkButDiv {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.checkBut {
+  height: 3rem;
+  width: 15rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+/* ================================================================================= */
+/************[XS]************/
+@media (min-width: 320px) and (max-width: 480px) {
+  .addUpDiv {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    justify-self: center;
+  }
+  .productDivList {
+    background-color: #f3f0f0;
+    overflow-y: scroll;
+    height: 20rem;
+    align-self: center;
+    margin: 0 1rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+  }
+  .eachDiv {
+    display: none;
+  }
+}
+/************[SM]************/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .addUpDiv {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    justify-self: center;
+  }
+  .productDivList {
+    background-color: #f3f0f0;
+    overflow-y: scroll;
+    height: 20rem;
+    align-self: center;
+    margin: 0 1rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+  }
+  .eachDiv {
+    display: none;
+  }
+}
+/************[MD]************/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .addUpDiv {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    justify-self: center;
+  }
+  .productDivList {
+    background-color: #f3f0f0;
+    overflow-y: scroll;
+    height: 20rem;
+    align-self: center;
+    margin: 0 1rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+  }
+}

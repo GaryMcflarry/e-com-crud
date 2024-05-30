@@ -1,0 +1,110 @@
+.wishDiv {
+  max-height: 40rem;
+  overflow-y: scroll;
+  align-items: center;
+}
+
+.title {
+  justify-self: center;
+}
+
+.productImgDiv {
+  justify-items: center;
+  align-items: center;
+  display: grid;
+}
+
+.productImg {
+  width: 10rem;
+}
+
+.text {
+  color: black;
+  font-weight: bold;
+}
+
+.large {
+  font-size: large;
+}
+
+.removeBut {
+  margin-left: 1rem;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+}
+
+.priceDiv {
+  justify-self: center;
+  width: 5rem;
+}
+
+.buttonDiv {
+  justify-self: center;
+  align-self: center;
+}
+
+.addBut {
+  height: 3rem;
+  width: 4rem;
+}
+
+.noWishTitle {
+  color: grey;
+  justify-self: center;
+  align-self: center;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .wishCard {
+    min-width: 20rem;
+    height: 30rem;
+    background-color: #ffffff;
+    margin: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+/************[SM]************/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .wishCard {
+    min-width: 20rem;
+    height: 30rem;
+    background-color: #ffffff;
+    margin: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+/************[MD]************/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wishCard {
+    min-width: 20rem;
+    height: 30rem;
+    background-color: #ffffff;
+    margin: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+/************[LG]************/
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .wishCard {
+    min-width: 20rem;
+    height: 10rem;
+    background-color: #ffffff;
+    margin: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+/************[XL]************/
+
+@media (min-width: 1301px) {
+  .wishCard {
+    min-width: 20rem;
+    height: 10rem;
+    background-color: #ffffff;
+    margin: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+}

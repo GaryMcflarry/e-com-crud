@@ -1,0 +1,37 @@
+<div class="grid panel">
+    <h1 class="col-12 signUpTitle">Sign Up</h1>
+    <div class="col-12-xs col-12-sm col-6-md col-6-lg col-6-xl halfPanel">
+
+        <label class="label" for="username">Username</label><br>
+        <!-- input for username field -->
+        <input class="input" type="text" id="username" name="username" [(ngModel)]="username"><br>
+        <label class="label" for="password">Password</label><br>
+        <!-- input for password field -->
+        <input class="input" type="text" id="password" name="password" [(ngModel)]="password"><br>
+        <label class="label" for="contact">Contact</label><br>
+        <!-- input for contact field -->
+        <input class="input" type="text" id="contact" name="contact" [(ngModel)]="contact"><br>
+    </div>
+    <div class="col-12-xs col-12-sm col-6-md col-6-lg col-6-xl halfPanel">
+        <p class="branchTitle">Select Branch</p>
+        <div class="selectArea">
+            <div class="option">
+                <input class="radio" type="radio" id="tembisaBranch" name="branch" value="1" [(ngModel)]="branch">
+                <label style="font-size: medium;" for="branch">Tembisa Branch</label><br>
+            </div>
+            <div class="option">
+                <input class="radio" type="radio" id="springsBranch" name="branch" value="2" [(ngModel)]="branch">
+                <label style="font-size: medium;" for="branch">Springs Branch</label><br>
+            </div>
+            <div class="option">
+                <input class="radio" type="radio" id="centurionBranch" name="branch" value="3" [(ngModel)]="branch">
+                <label style="font-size: medium;" for="branch">Centurion Branch</label><br>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-12-md col-12-sm col-12-xs buttonDiv">
+        <!-- Button for sign up -->
+        <button class="button-primary button signUpBut" (click)="signUp()">Sign up</button>
+    </div>
+
+</div>

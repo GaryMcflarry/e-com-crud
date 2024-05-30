@@ -1,0 +1,52 @@
+.panel {
+  background-color: white;
+  border: none;
+}
+.halfPanel {
+  justify-content: center;
+  display: grid;
+  align-self: center;
+  padding: 2rem;
+}
+/* ================================================================================= */
+.exitBut {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  border: none;
+  margin-bottom: 2rem;
+  font-size: large;
+  font-weight: bold;
+  background-color: white;
+}
+.exitBut:hover {
+  background-color: rgb(197, 197, 197);
+}
+/* ================================================================================= */
+label {
+  font-size: large;
+  font-weight: 500;
+}
+input {
+  border-radius: 10px;
+  border: none;
+  background-color: #dddddd;
+  box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.2);
+  height: 2.5rem;
+  width: 16rem;
+  font-size: large;
+}
+/* ================================================================================= */
+.updateBut {
+  width: 8rem;
+  height: 3rem;
+}
+.remove {
+  margin-top: 1rem;
+  width: 10rem;
+  background-color: red;
+}
+.buttonDiv {
+  display: grid;
+  justify-content: center;
+}

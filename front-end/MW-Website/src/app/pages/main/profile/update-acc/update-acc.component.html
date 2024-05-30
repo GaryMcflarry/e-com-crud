@@ -1,0 +1,26 @@
+<!-- Subcribing to the profile observable -->
+<ng-container *ngIf="profile$ | async as user">
+<div class="grid panel">
+
+    <div class="col-12 col-12-md col-12-sm col-12-xs halfPanel">
+        <!-- Exit button -->
+        <button class="exitBut pointer" (click)="exit()">x</button>
+        <label for="username">Username</label><br>
+        <!-- Function to make sure elements arent null -->
+        <input type="text" id="username" name="username" [(ngModel)]="username"  (input)="checkInputs()"><br>
+        <label for="password">Password</label><br>
+        <!-- Function to make sure elements arent null -->
+        <input type="text" id="password" name="password" [(ngModel)]="password" (input)="checkInputs()" placeholder="Insert New/Old Password"><br>
+        <label for="contact">Contact</label><br>
+        <!-- Function to make sure elements arent null -->
+        <input type="text" id="contact" name="contact" [(ngModel)]="contact" (input)="checkInputs()"><br>
+        <div class="buttonDiv">
+            <!-- Button will only be available if all fields are entered -->
+            <button class="button-primary button updateBut pointer" (click)="update()"
+            [ngClass]="{'button-primary-disabled': disabled}" style="justify-self: center;">Update</button>
+            <!-- Button to delete account -->
+            <button class="button-primary button updateBut remove pointer" (click)="deleteAccount()">Delete account</button>
+        </div>
+    </div>
+</div>
+</ng-container>

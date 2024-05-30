@@ -1,0 +1,22 @@
+<div class="cardDiv">
+
+    <img [src]="data.image" class="cardImg">
+    <p class="cardProductName">{{data.name}}</p>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+
+        <!-- HTML code to cater if product has discount -->
+        <ng-container *ngIf="data.discount !== '0' else base">
+            <p>
+                <span class="cardText">R{{newPrice | number: '1.2-2'}}</span> <span class="cardText"> | </span> 
+                <span class="cardText oldPrice">R{{data.price}}
+                </span> <span class="cardText discount">{{data.discount}}% off</span>
+            </p>
+        </ng-container>
+        <ng-template #base>
+            <p class="cardText">R{{data.price}}</p>
+        </ng-template>
+
+    </div>
+
+</div>

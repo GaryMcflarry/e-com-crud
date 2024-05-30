@@ -1,0 +1,26 @@
+.cardDiv {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+.cardImg {
+  height: 10rem;
+  width: 15rem;
+}
+.cardProductName {
+  font-size: medium;
+  font-weight: bold;
+  color: grey;
+}
+.cardText {
+  font-weight: bold;
+  color: grey;
+  font-size: small;
+}
+.discount {
+    color: rgb(77, 174, 77);
+}
+.oldPrice {
+    text-decoration: line-through;
+}

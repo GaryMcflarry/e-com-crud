@@ -1,0 +1,131 @@
+hr {
+  border: none;
+  border-top: 1px solid #ccc; /* Change color and style as needed */
+  margin: 20px 0; /* Adjust margin as needed */
+}
+.popImg {
+  width: 25rem;
+  height: auto;
+}
+.textL {
+  font-size: x-large;
+  font-weight: 600;
+  margin: 0;
+}
+.textS {
+  font-size: smaller;
+  font-weight: 600;
+}
+.text-m {
+  margin: 0;
+}
+.dealText {
+  color: rgb(95, 209, 83);
+}
+.oldText {
+  text-decoration: line-through;
+}
+.ratingText {
+  color: grey;
+}
+.ratingImg {
+  width: 1rem;
+  margin-right: 5px;
+}
+.ratingOption {
+  width: 1rem;
+  margin-right: 5px;
+}
+.cartBut {
+  height: 2.5rem;
+  width: 13rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: larger;
+}
+.cartBut:hover {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
+.cartButIcon {
+  width: 2rem;
+  margin-right: 10px;
+}
+.space {
+  display: flex;
+  justify-content: space-between;
+}
+.rateBut {
+  width: 5rem;
+  height: 20px;
+  border: none;
+  border-radius: 0px;
+  margin-right: 4px;
+  font-size: small;
+}
+.ratingImg {
+  width: 1rem;
+  margin-right: 4px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  overflow-y: scroll;
+  text-align: center;
+  height: 7rem;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 5rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content p {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  cursor: pointer;
+  display: block;
+}
+
+/************[XS]************/
+@media (min-width: 320px) and (max-width: 480px) {
+  .popImg {
+    width: 20rem;
+    height: auto;
+  }
+}
+/************[SM]************/
+@media (min-width: 481px) and (max-width: 768px) {
+  .popImg {
+    width: 20rem;
+    height: auto;
+  }
+}
+/************[MD]************/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .popImg {
+    width: 20rem;
+    height: auto;
+  }
+}
+/************[LG]************/
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .popImg {
+    width: 20rem;
+    height: auto;
+  }
+}
+/************[XL]************/
+@media (min-width: 1301px) {
+  .popImg {
+    width: 25rem;
+    height: auto;
+  }
+}

@@ -1,0 +1,215 @@
+.sidePanel {
+  position: fixed;
+  top: 70px;
+}
+.sideCard {
+  height: 8rem;
+  width: 6rem;
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+.sideIcon {
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+.mpIcon {
+  background-image: url("src/assets/images/meat products.png");
+}
+.mpIcon:hover {
+  background-image: url("src/assets/images/meat products H.png");
+}
+.dealsIcon {
+  background-image: url("src/assets/images/deals.png");
+}
+.dealsIcon:hover {
+  background-image: url("src/assets/images/deals H.png");
+}
+.smIcon {
+  background-image: url("src/assets/images/S & M.png");
+}
+.smIcon:hover {
+  background-image: url("src/assets/images/S & M H.png");
+}
+.ssIcon {
+  background-image: url("src/assets/images/S & S.webp");
+}
+.ssIcon:hover {
+  background-image: url("src/assets/images/S & S H.webp");
+}
+.sbIcon {
+  background-image: url("src/assets/images/SB.png");
+}
+.sbIcon:hover {
+  background-image: url("src/assets/images/SB H.png");
+}
+.sideCard-Mb {
+  margin-bottom: 3rem;
+}
+
+/* ================================================================================= */
+
+.topDealCards {
+  height: 24rem;
+  display: flex;
+  align-items: end;
+}
+.bottomDealCards {
+  height: 14rem;
+  display: flex;
+  align-items: end;
+}
+.dealCard {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+.dealCard h2 {
+  margin: 0 10px;
+  color: white;
+  font-weight: 500;
+}
+.mpDealCard {
+  background-image: url("src/assets/images/mpDealsBackground.jpg");
+}
+.smDealCard {
+  background-image: url("src/assets/images/smDealsBackground.webp");
+}
+.cutDealCard {
+  background-image: url("src/assets/images/cutDealsBackground.webp");
+}
+.ssDealCard {
+  background-image: url("src/assets/images/ssDealsBackground.jpg");
+}
+.sbDealCard {
+  background-image: url("src/assets/images/sbDealsBackground.jpg");
+}
+
+/* ================================================================================= */
+
+.wishBut {
+  height: 2rem;
+  width: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: end;
+  cursor: pointer;
+}
+.active {
+  background-image: url("src/assets/images/activeHeart.png");
+  background-size: 100%;
+}
+.unactive {
+  background-image: url("src/assets/images/unactiveHeart.png");
+  background-size: 75%;
+}
+
+/* ================================================================================= */
+
+/************[XS]************/
+@media (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-size: x-large;
+  }
+
+  .sideCard {
+    height: 8rem;
+    width: 5rem;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .divSpace {
+    margin-left: 90px;
+    padding-top: 50px;
+  }
+}
+/************[SM]************/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-size: x-large;
+  }
+
+  .sideCard {
+    height: 8rem;
+    width: 5rem;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .divSpace {
+    margin-left: 90px;
+    padding-top: 50px;
+  }
+}
+/************[MD]************/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  .sideCard {
+    height: 8rem;
+    width: 6rem;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .divSpace {
+    margin-left: 110px;
+    padding-top: 50px;
+  }
+}
+/************[LG]************/
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  .sideCard {
+    height: 8rem;
+    width: 6rem;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .divSpace {
+    margin-left: 110px;
+    padding-top: 50px;
+  }
+}
+/************[XL]************/
+
+@media (min-width: 1301px) {
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  .sideCard {
+    height: 8rem;
+    width: 6rem;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .divSpace {
+    margin-left: 110px;
+    padding-top: 50px;
+  }
+}

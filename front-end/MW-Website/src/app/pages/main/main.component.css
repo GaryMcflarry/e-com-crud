@@ -1,0 +1,113 @@
+.topBarDiv {
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+/* ================================================================================= */
+.icon {
+  color: white;
+  font-size: xx-large;
+}
+/* ================================================================================= */
+.logoDiv {
+  overflow: hidden;
+  max-height: 70px;
+}
+.noLogoDiv {
+  display: none;
+}
+.logoImg {
+  height: 8rem;
+}
+.smLogoImg {
+  height: 4rem;
+}
+/* ================================================================================= */
+.profileLogo {
+  border: none;
+  border-radius: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.profileLogo h1 {
+  font-size: x-large;
+  font-weight: 400;
+}
+.user {
+  background-color: #3d738b;
+}
+.admin {
+  background-color: #f18507;
+}
+/* ================================================================================= */
+.searchBarDiv {
+  padding-left: 20px;
+  min-height: 70px;
+}
+.smSearchBarDiv {
+  min-height: 70px;
+}
+input {
+  padding-left: 20px;
+  border-radius: 2rem;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  font-size: small;
+}
+.searchBut {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: x-large;
+  margin-left: 10px;
+}
+/* ================================================================================= */
+.noProfileDiv {
+  display: none;
+}
+/* ================================================================================= */
+.cartDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* ================================================================================= */
+.matDrawer {
+  margin-top: 70px;
+  position: fixed;
+  width: 10rem;
+  background-color: #252994;
+  display: block;
+  height: 100%;
+}
+.drawerButton {
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 100%;
+  height: 3rem;
+  border-bottom: solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.searchArea {
+  position: fixed;
+  top: 70px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  width: 100%;
+  max-height: 34rem;
+  z-index: 1000;
+}

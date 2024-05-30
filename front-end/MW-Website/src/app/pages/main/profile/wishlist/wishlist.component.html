@@ -1,0 +1,42 @@
+<!-- Subcribing to the wish observable -->
+<ng-container *ngIf="userWish$ | async as wish, else base">
+
+    <div class="grid bg-secondary wishDiv noScroll">
+
+        <h1 class="col-12 title">Wishlist</h1>
+
+        <!-- Loop for every product in the user's wishlist -->
+        <ng-container *ngFor="let product of wish">
+
+            <div class="col-12 grid wishCard">
+                <div class="col-12-xs col-12-sm col-12-md col-2-lg col-2-xl productImgDiv">
+                    <img class="productImg" [src]="product.data.image">
+                </div>
+                <div class="col-12-xs col-12-sm col-12-md col-4-lg col-4-xl">
+                    <p class="text">Name:</p>
+                    <p class="text large">{{product.data.name}}</p>
+                    <p class="text">{{product.data.quantity}} in Stock</p>
+                    <!-- Allowing the user to remove product from Wishlist -->
+                    <button class="removeBut pointer" (click)="removeWish(product.data.productID)">Remove</button>
+                </div>
+                <div class="col-6-xs col-6-sm col-6-md col-4-lg col-4-xl priceDiv">
+                    <p class="text">Each:</p>
+                    <p class="text">R {{product.data.price}}</p>
+                </div>
+                <div class="col-6-xs col-6-sm col-6-md col-2-lg col-2-xl buttonDiv">
+                    <!-- Allowing user to add item form wishlist to their cart -->
+                    <button class="button button-primary addBut pointer">
+                        <i class="pi pi-shopping-cart icon" (click)="addToCart(product.data.productID)"></i>Add
+                    </button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</ng-container>
+<!-- Only will appear if their are no items in the user's wishlist -->
+<ng-template #base>
+    <div class="grid bg-secondary wishDiv">
+        <h1 class="col-12 title">Wishlist</h1>
+        <div class="col-12 grid wishCard">
+            <h1 class="col-12 noWishTitle">No Items in Wishlist</h1>
+        </div>

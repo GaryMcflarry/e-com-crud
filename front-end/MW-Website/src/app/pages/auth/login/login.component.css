@@ -1,0 +1,110 @@
+label {
+  font-size: x-large;
+  font-weight: 500;
+}
+
+input {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #dddddd;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
+  height: 2.5rem;
+  width: 16rem;
+  font-size: large;
+}
+
+button {
+  width: 8rem;
+  height: 3rem;
+}
+
+img {
+  height: 20rem;
+  width: 30rem;
+}
+
+h1 {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: xx-large;
+  justify-self: center;
+}
+
+p {
+  font-size: small;
+  font-weight: bold;
+}
+
+.panel {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.halfPanel {
+  justify-content: center;
+  display: grid;
+  align-self: center;
+  padding: 1rem;
+}
+
+.signDiv {
+  justify-self: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  input {
+    height: 2rem;
+    width: 12rem;
+    margin-bottom: 0;
+  }
+
+  img {
+    height: 8rem;
+    width: 13rem;
+  }
+
+  label {
+    font-size: large;
+    font-weight: 500;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  button {
+    width: 5rem;
+    height: 2rem;
+  }
+
+  p {
+    font-size: smaller;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  img {
+    height: 18rem;
+    width: 28rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  img {
+    height: 18rem;
+    width: 28rem;
+  }
+}
+
+/* @media (min-width: 1025px) and (max-width: 1300px) {
+}
+
+@media (min-width: 1301px) {
+} */

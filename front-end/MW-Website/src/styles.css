@@ -1,0 +1,418 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+.bg-primary {
+  background-color: #252994;
+}
+
+.bg-secondary {
+  background-color: #f4f9ff;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.authBg {
+  background: url("./assets/images/background.jpeg");
+}
+
+.mainBg {
+  background-color: #f4f9ff;
+}
+
+.noScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bgDiv {
+  height: 100%;
+  width: 100%;
+}
+
+.prodCard {
+  background-color: #ffffff;
+  height: 30vh;
+  margin: 15px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: #252994;
+  color: white;
+  font-size: large;
+}
+
+.button-secondary {
+  background-color: #f18507;
+  color: white;
+  font-size: large;
+}
+
+.button-primary:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-secondary:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-primary-disabled {
+  opacity: 0.5;
+  font-size: large;
+  cursor: not-allowed;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* mesmeric */
+
+.striped:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  min-height: 50px;
+}
+
+.grid-striped:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.pd-5 {
+  padding: 5px;
+}
+
+.pd-5-v {
+  padding: 5px 0px;
+}
+
+.pd-5-h {
+  padding: 0px 5px;
+}
+
+.header {
+  grid-column: span 12;
+}
+.cell {
+  grid-column: span 12;
+}
+
+.header {
+  font-weight: bold;
+  background-color: #fff;
+  color: var(--ion-color-secondary);
+  text-align: center;
+}
+
+/**=======[DEFAULT]=======**/
+
+.col-1 {
+  grid-column: span 1;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-5 {
+  grid-column: span 5;
+}
+.col-6 {
+  grid-column: span 6;
+}
+.col-7 {
+  grid-column: span 7;
+}
+.col-8 {
+  grid-column: span 8;
+}
+.col-9 {
+  grid-column: span 9;
+}
+.col-10 {
+  grid-column: span 10;
+}
+.col-11 {
+  grid-column: span 11;
+}
+.col-12 {
+  grid-column: span 12;
+}
+
+/****************************************/
+
+/************[XS]************/
+@media (min-width: 320px) and (max-width: 480px) {
+  .fs-size {
+    font-size: 0.6rem;
+  }
+  /**=======[XS]=======**/
+  .col-1-xs {
+    grid-column: span 1;
+  }
+  .col-2-xs {
+    grid-column: span 2;
+  }
+  .col-3-xs {
+    grid-column: span 3;
+  }
+  .col-4-xs {
+    grid-column: span 4;
+  }
+  .col-5-xs {
+    grid-column: span 5;
+  }
+  .col-6-xs {
+    grid-column: span 6;
+  }
+  .col-7-xs {
+    grid-column: span 7;
+  }
+  .col-8-xs {
+    grid-column: span 8;
+  }
+  .col-9-xs {
+    grid-column: span 9;
+  }
+  .col-10-xs {
+    grid-column: span 10;
+  }
+  .col-11-xs {
+    grid-column: span 11;
+  }
+  .col-12-xs {
+    grid-column: span 12;
+  }
+}
+/************[SM]************/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .fs-size {
+    font-size: 0.7rem;
+  }
+  /**=======[SM]=======**/
+  .col-1-sm {
+    grid-column: span 1;
+  }
+  .col-2-sm {
+    grid-column: span 2;
+  }
+  .col-3-sm {
+    grid-column: span 3;
+  }
+  .col-4-sm {
+    grid-column: span 4;
+  }
+  .col-5-sm {
+    grid-column: span 5;
+  }
+  .col-6-sm {
+    grid-column: span 6;
+  }
+  .col-7-sm {
+    grid-column: span 7;
+  }
+  .col-8-sm {
+    grid-column: span 8;
+  }
+  .col-9-sm {
+    grid-column: span 9;
+  }
+  .col-10-sm {
+    grid-column: span 10;
+  }
+  .col-11-sm {
+    grid-column: span 11;
+  }
+  .col-12-sm {
+    grid-column: span 12;
+  }
+}
+/************[MD]************/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fs-size {
+    font-size: 0.7rem;
+  }
+  /**=======[MD]=======**/
+
+  .col-1-md {
+    grid-column: span 1;
+  }
+  .col-2-md {
+    grid-column: span 2;
+  }
+  .col-3-md {
+    grid-column: span 3;
+  }
+  .col-4-md {
+    grid-column: span 4;
+  }
+  .col-5-md {
+    grid-column: span 5;
+  }
+  .col-6-md {
+    grid-column: span 6;
+  }
+  .col-7-md {
+    grid-column: span 7;
+  }
+  .col-8-md {
+    grid-column: span 8;
+  }
+  .col-9-md {
+    grid-column: span 9;
+  }
+  .col-10-md {
+    grid-column: span 10;
+  }
+  .col-11-md {
+    grid-column: span 11;
+  }
+  .col-12-md {
+    grid-column: span 12;
+  }
+}
+/************[LG]************/
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .fs-size {
+    font-size: 0.7rem;
+  }
+  /**=======[LG]=======**/
+
+  .col-1-lg {
+    grid-column: span 1;
+  }
+  .col-2-lg {
+    grid-column: span 2;
+  }
+  .col-3-lg {
+    grid-column: span 3;
+  }
+  .col-4-lg {
+    grid-column: span 4;
+  }
+  .col-5-lg {
+    grid-column: span 5;
+  }
+  .col-6-lg {
+    grid-column: span 6;
+  }
+  .col-7-lg {
+    grid-column: span 7;
+  }
+  .col-8-lg {
+    grid-column: span 8;
+  }
+  .col-9-lg {
+    grid-column: span 9;
+  }
+  .col-10-lg {
+    grid-column: span 10;
+  }
+  .col-11-lg {
+    grid-column: span 11;
+  }
+  .col-12-lg {
+    grid-column: span 12;
+  }
+}
+/************[XL]************/
+
+@media (min-width: 1301px) {
+  .fs-size {
+    font-size: 0.85rem;
+  }
+  /**=======[XL]=======**/
+
+  .col-1-xl {
+    grid-column: span 1;
+  }
+  .col-2-xl {
+    grid-column: span 2;
+  }
+  .col-3-xl {
+    grid-column: span 3;
+  }
+  .col-4-xl {
+    grid-column: span 4;
+  }
+  .col-5-xl {
+    grid-column: span 5;
+  }
+  .col-6-xl {
+    grid-column: span 6;
+  }
+  .col-7-xl {
+    grid-column: span 7;
+  }
+  .col-8-xl {
+    grid-column: span 8;
+  }
+  .col-9-xl {
+    grid-column: span 9;
+  }
+  .col-10-xl {
+    grid-column: span 10;
+  }
+  .col-11-xl {
+    grid-column: span 11;
+  }
+  .col-12-xl {
+    grid-column: span 12;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

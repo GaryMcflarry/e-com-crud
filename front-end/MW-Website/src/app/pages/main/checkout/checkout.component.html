@@ -1,0 +1,70 @@
+<div class="grid bg-secondary" style="padding-top: 70px; height: 100%; width: 100%; ">
+    <div class="col-12 titleDiv">
+        <img class="titleImg" src="assets/images/shoppingCart.png">
+        <h1 class="title">My Cart</h1>
+        <img class="rTitleImg" src="assets/images/shoppingCart.png">
+    </div>
+
+    <!-- Subscribing to observable to get products that is in user's cart -->
+    <ng-container *ngIf="userCart$ | async as cart">
+        <div class="col-12-xs col-12-sm col-12-md col-6-lg col-6-xl grid productDivList noScroll">
+
+            <!-- Loop for every product for the Observable -->
+            <ng-container *ngFor="let product of cart, let i = index">
+                <div class="col-12 grid productDiv">
+                    <img class="col-3 productImg" [src]="product.data.image">
+                    <div class="col-3">
+                        <p class="text">Name:</p>
+                        <p class="textL">{{product.data.name}}</p>
+                        <p class="greyTextS">{{product.data.quantity}} in Stock</p>
+                    </div>
+                    <div class="col-2 col-3-xs productPanel eachDiv">
+                        <p class="text">Each:</p>
+                        <p class="text">R {{product.data.price}}</p>
+                    </div>
+                    <div class="col-2 col-3-xs productPanel pointer">
+                        <p class="text">Quantity:</p>
+                        <input [(ngModel)]="orderQuantity[i]" type="number" min="1" placeholder="+">
+                    </div>
+                    <div class="col-2 productPanel">
+                        <p class="text">Total:</p>
+                        <p class="text">R{{totalCalculate(product.data.price, orderQuantity[i]) | number: '1.2-2'}}</p>
+                        <div>
+                            <button class="productBut pointer"
+                                (click)="removeCartItem(product.data.productID)">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="col-12-xs col-12-sm col-12-md col-6-lg col-6-xl grid"
+            style="display: flex; justify-content: center;">
+            <div class="col-12 checkoutDiv">
+                <div class="grid">
+                    <div class="col-12 checkoutSmDiv">
+                        <p class="checkoutDisplayTxt">Delivery Fee:</p>
+                        <p class="checkoutDisplayGTxt">R 20.00</p>
+                    </div>
+                    <div class="col-12 checkoutSmDiv">
+                        <p class="checkoutDisplayTxt">Tax:</p>
+                        <p class="checkoutDisplayGTxt">10%</p>
+                    </div>
+                    <div class="col-12 checkoutSmDiv">
+                        <p class="checkoutDisplayTxt">Estimated Cost:</p>
+                        <p class="checkoutDisplayGTxt">R{{ getTotalAmount(cart, 0) | number: '1.2-2' }}</p>
+                    </div>
+                    <div class="col-12 checkButDiv">
+                        <button (click)="checkOut()" class="button button-primary checkBut"><i
+                                class="pi pi-shopping-cart pointer"></i> Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12-xs col-12-sm col-12-md col-6-lg col-6-xl addUpDiv">
+            <p class="text">Items: {{cart.length}}</p>
+            <p class="text">R{{ getTotalAmount(cart, 0) | number: '1.2-2' }}</p>
+        </div>
+    </ng-container>
+</div>

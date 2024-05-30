@@ -1,0 +1,52 @@
+table {
+  background-color: #ffffff;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  justify-self: center;
+  margin-top: 50px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.tabHeader {
+  text-align: left;
+  height: 3rem;
+  padding: 25px;
+  width: 20%;
+}
+.tabCell {
+  text-align: left;
+  height: 3rem;
+  padding: 25px;
+}
+.tabInput {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  width: 3rem;
+}
+.tabRow {
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.addAdmin {
+  text-align: center;
+  font-size: xx-large;
+  color: #f18507;
+}
+.removeDiv {
+  text-align: center;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .noCategory {
+    display: none;
+  }
+}
+/************[SM]************/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .noCategory {
+    display: none;
+  }
+}

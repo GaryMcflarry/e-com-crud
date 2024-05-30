@@ -1,0 +1,28 @@
+<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center;">
+    <div class="grid panel">
+        <div class="col-6 col-12-md col-12-sm col-12-xs halfPanel">
+            <img src="assets/images/logo.png" alt="MW Logo">
+            <h1>Welcome Back</h1>
+        </div>
+
+        <div class="col-6 col-12-md col-12-sm col-12-xs halfPanel">
+            <label for="username">Username</label><br>
+            <!-- Funtion to check input field -->
+            <input type="text" id="username" name="username" [(ngModel)]="username" (input)="checkInputs()"><br>
+            <label for="password">Password</label><br>
+            <!-- Funtion to check input field -->
+            <input type="password" id="password" name="password" [(ngModel)]="password" (input)="checkInputs()"><br>
+            <div style="justify-self: center;">
+                <!-- login button -->
+                <!-- Will be available when all fields are entered -->
+                <button class="button-primary button pointer" [disabled]="disabled" (click)="login()"
+                    [ngClass]="{'button-primary-disabled': disabled}">Login</button>
+            </div>
+            <div class="signDiv">
+                <!-- sign up button -->
+                <p><a class="pointer" (click)="openDialog('0ms', '0ms')">Don't have an account?Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

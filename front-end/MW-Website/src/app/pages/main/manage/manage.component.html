@@ -1,0 +1,107 @@
+<!-- Subcribing to the combined observable -->
+<ng-container *ngIf="vm$ | async as vm">
+    <div class="bg-secondary" style="padding-top: 70px; height: 100%; width: 100%;">
+
+        <mat-tab-group>
+            <!-- Products tabs -->
+            <mat-tab label="Products">
+                <div class="grid">
+                    <table class="col-12">
+                        <tr class="tabRow">
+                            <th class="col-2 tabHeader">ID</th>
+                            <th class="col-2 tabHeader noCategory">Category</th>
+                            <th class="col-2 tabHeader">Name</th>
+                            <th class="col-2 tabHeader">Quantity</th>
+                            <th class="col-2 tabHeader">Price</th>
+                            <th class="col-2 tabHeader">Discount</th>
+                        </tr>
+                        <!-- Loop for every product -->
+                        <ng-container *ngFor="let products of vm.products">
+                            <tr>
+                                <td class="col-2 tabCell">{{products.productID}}</td>
+                                <td class="col-2 tabCell noCategory">{{products.category}}</td>
+                                <td class="col-2 tabCell">{{products.name}}</td>
+                                <!-- text change and 1 second delay product if edited -->
+                                <td class="col-2 tabCell"><input class="tabInput" [(ngModel)]="products.quantity"
+                                        (ngModelChange)="onQuantityChange(products)">
+                                </td>
+                                <!-- text change and 1 second delay product if edited -->
+                                <td class="col-2 tabCell"><input class="tabInput" [(ngModel)]="products.price"
+                                        (ngModelChange)="onPriceChange(products)">
+                                </td>
+                                <!-- text change and 1 second delay product if edited -->
+                                <td class="col-2 tabCell"><input class="tabInput" [(ngModel)]="products.discount"
+                                        (ngModelChange)="onDiscountChange(products)" placeholder="null">
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </table>
+                </div>
+            </mat-tab>
+
+            <!-- Users tabs -->
+            <mat-tab label="Users">
+                <div class="grid">
+                    <table class="col-12">
+                        <tr class="tabRow">
+                            <th class="col-2 tabHeader">ID</th>
+                            <th class="col-2 tabHeader">Username</th>
+                            <th class="col-2 tabHeader">Contact</th>
+                            <th class="col-2 tabHeader">Admin</th>
+                            <!-- Opening Dialog -->
+                            <th class="col-2 tabHeader addAdmin pointer" (click)="openDialog('0ms', '0ms')">+</th>
+                        </tr>
+                        <!-- Loop for every users -->
+                        <ng-container *ngFor="let users of vm.users">
+                            <tr>
+                                <td class="col-2 tabCell">{{users.userID}}</td>
+                                <td class="col-2 tabCell">{{users.username}}</td>
+                                <td class="col-2 tabCell">{{users.contact}}</td>
+                                <td class="col-2 tabCell">{{users.admin}}</td>
+                                <!-- Button to remove user -->
+                                <td class="col-2 removeDiv">
+                                    <button class="button button-secondary"
+                                        (click)="removeUser(users.userID)">X</button>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </table>
+                </div>
+            </mat-tab>
+
+            <!-- Subscribing to orders observable -->
+            <ng-container *ngIf="vm.orders">
+                <!-- Products tabs -->
+                <mat-tab label="Orders">
+                    <div class="grid">
+                        <table class="col-12">
+                            <tr class="tabRow">
+                                <th class="col-2 tabHeader">ID</th>
+                                <th class="col-2 tabHeader">User ID</th>
+                                <th class="col-2 tabHeader">Product ID</th>
+                                <th class="col-2 tabHeader">Order time</th>
+                                <th class="col-2 tabHeader">Quantity</th>
+                            </tr>
+
+                            <!-- Loop for every orders -->
+                            <ng-container *ngFor="let orders of vm.orders">
+                                <tr>
+                                    <td class="col-2 tabCell">{{orders.orderID}}</td>
+                                    <td class="col-2 tabCell">{{orders.userID}}</td>
+                                    <td class="col-2 tabCell">{{orders.productID}}</td>
+                                    <td class="col-2 tabCell">{{orders.orderDate}}</td>
+                                    <td class="col-2 tabCell">{{orders.quantity}}</td>
+                                    <!-- Button to remove Order -->
+                                    <td class="col-2 tabCell">
+                                        <button class="button button-secondary removeDiv"
+                                            (click)="removeOrder(orders.orderID)">X</button>
+                                    </td>
+                                </tr>
+                            </ng-container>
+                        </table>
+                    </div>
+                </mat-tab>
+            </ng-container>
+        </mat-tab-group>
+    </div>
+</ng-container>

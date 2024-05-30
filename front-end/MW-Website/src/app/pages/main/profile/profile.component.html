@@ -1,0 +1,35 @@
+<div class="bg-secondary profileDiv">
+    <div class="bg-primary col-12 grid topDiv">
+        <div class="col-12 grid">
+            <!-- Button to route back home -->
+            <i (click)="routeToHome()" class="pi pi-arrow-left backIcon pointer"></i>
+            <img class="col-12 logoImg" src="assets/images/logo.png">
+        </div>
+    </div>
+
+    <div class="bg-secondary col-12 grid middleDiv">
+        <!-- Displaying different profiles based on whenther or not the user is admin -->
+        <ng-container *ngIf="this.user.getToken().admin == 'true', else profilebase">
+            <div class="col-12 profileLogo admin">
+                <h1>{{iconName}}</h1>
+            </div>
+        </ng-container>
+        <ng-template #profilebase>
+            <div class="col-12 profileLogo user">
+                <h1>{{iconName}}</h1>
+            </div>
+        </ng-template>
+        <p class="col-12 username">{{this.user.getToken().username}}</p>
+    </div>
+
+    <div class="col-12 grid bottomDiv">
+        <!-- Button to open update account dialog -->
+        <button class="button button-primary col-12-xs col-12-sm col-12-md col-6-lg col-6-xl pointer"
+            (click)="openDialog('0ms', '0ms')"
+            style="margin: 10px; box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5); height: 10rem;">Update Account</button>
+        <!-- Button to open users wishlist -->
+        <button class="button button-primary col-12-xs col-12-sm col-12-md col-6-lg col-6-xl pointer"
+            (click)="wishList()"
+            style="margin: 10px; box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5); height: 10rem;">Wishlist</button>
+    </div>
+</div>

@@ -1,0 +1,192 @@
+<!-- Subcribing to the combined observable -->
+<ng-container *ngIf="vm$ | async as vm">
+
+    <!-- If statement to show certian HTML code if deal is part of the current url (deal page) -->
+    <ng-container *ngIf="this.hud.isDealsRoute(); else base">
+        <div class="grid bg-secondary noScroll" style="overflow-y: scroll;">
+            <div class="bg-secondary sidePanel">
+                <a>
+                    <div class="col-12 sideCard center" (click)="routeToBase()">
+                        <i class="pi pi-arrow-left" style=" font-size: x-large;"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 grid divSpace">
+            <h1 class="col-12 h1-mt">{{this.hud.deal}} | {{vm.branch.data.branchName}}</h1>
+
+            <!-- Displaying every product individually that contain a discount -->
+            <ng-container *ngFor="let products of vm.products.data[this.hud.deal]">
+
+                <!-- Only if discount -->
+                <ng-container *ngIf="products.discount !== '0'">
+                    <div class="col-12-xs col-12-sm col-6-md col-4-lg col-3-xl prodCard pointer">
+
+                        <!-- Code to have popup appear -->
+                        <!-- Code to display card component and Inject product data into it -->
+                        <app-card (click)="this.hud.popUpRoute(products.productID)" [data]="products"></app-card>
+
+                        <!-- HTML code based on if product is in users wishlist -->
+                        <ng-container *ngIf="wishCheck(products.productID, vm.wishProducts.data), else wishBase">
+                            <div (click)="removeWish(products.productID)" class="wishBut active"></div>
+                        </ng-container>
+
+                        <ng-template #wishBase>
+                            <div (click)="addWish(products.productID)" class="wishBut unactive"></div>
+                        </ng-template>
+
+                    </div>
+
+                </ng-container>
+
+            </ng-container>
+
+        </div>
+    </ng-container>
+
+
+    <!-- Home page -->
+    <ng-template #base>
+        <div class="grid bg-secondary noScroll" style="overflow-y: scroll;">
+
+            <!-- Side panel for sode bars that are used for navigation -->
+            <div class="bg-secondary sidePanel">
+
+                <div (click)="navigateTo(deals)" class="col-12 sideCard sideCard-Mb sideIcon dealsIcon pointer" div>
+                </div>
+
+                <div (click)="navigateTo(MP)" class="col-12 sideCard sideCard-Mb sideIcon mpIcon pointer"></div>
+
+                <div (click)="navigateTo(SM)" class="col-12 sideCard sideCard-Mb sideIcon smIcon pointer"></div>
+
+                <div (click)="navigateTo(SS)" class="col-12 sideCard sideCard-Mb sideIcon ssIcon pointer"></div>
+
+                <div (click)="navigateTo(SB)" class="col-12 sideCard sideIcon sbIcon pointer"></div>
+            </div>
+        </div>
+
+        <!-- Catalog -->
+        <div class="col-12 grid divSpace">
+
+            <!-- Routes to selective deal pages -->
+            <h1 class="col-12" #deals>Deals of the day | {{vm.branch.data.branchName}}</h1>
+
+            <div (click)="routeToDeals('Meat Products')"
+                class="col-12-xs col-12-sm col-6-md col-9-lg col-9-xl dealCard topDealCards mpDealCard pointer">
+                <h2>Deals in Meats >></h2>
+            </div>
+
+            <div (click)="routeToDeals('Smoked and Marinated')"
+                class="col-3-lg col-3-xl col-12-xs col-12-sm col-6-md dealCard topDealCards smDealCard pointer">
+                <h2>Deals on <br> Smoked and <br> Marinated <br> Meats >>
+                </h2>
+            </div>
+
+            <div (click)="routeToDeals('Sauces and Spices')"
+                class="col-12-xs col-12-sm col-6-md col-6-lg col-6-xl dealCard bottomDealCards ssDealCard pointer">
+                <h2>Sauces and Spices <br> Deals >></h2>
+            </div>
+
+            <div (click)="routeToDeals('Spit Braai')"
+                class="col-12-xs col-12-sm col-6-md col-6-lg col-6-xl dealCard bottomDealCards sbDealCard pointer">
+                <h2>Spit Braai Hiring <br> Deals >></h2>
+            </div>
+
+            <!-- Meat Products items -->
+            <h1 class="col-12" #MP>Meat Products | {{vm.branch.data.branchName}}</h1>
+
+            <!-- Displaying every product individually that is in selective category -->
+            <ng-container *ngFor="let products of vm.products.data['Meat Products']">
+
+                <div class="col-12-xs col-12-sm col-6-md col-4-lg col-3-xl prodCard pointer">
+
+                    <!-- Code to have popup appear -->
+                    <!-- Code to display card component and Inject product data into it -->
+                    <app-card (click)="this.hud.popUpRoute(products.productID)" [data]="products"></app-card>
+
+                    <!-- HTML code based on if product is in users wishlist -->
+                    <ng-container *ngIf="wishCheck(products.productID, vm.wishProducts.data), else wishBase">
+                        <div (click)="removeWish(products.productID)" class="wishBut active"></div>
+                    </ng-container>
+
+                    <ng-template #wishBase>
+                        <div (click)="addWish(products.productID)" class="wishBut unactive"></div>
+                    </ng-template>
+
+                </div>
+
+            </ng-container>
+
+            <!-- Smoked Marinated items -->
+            <h1 class="col-12 h1-mt" #SM>Smoked and Marinated Products | {{vm.branch.data.branchName}}</h1>
+
+            <!-- Displaying every product individually that is in selective category -->
+            <ng-container *ngFor="let products of vm.products.data['Smoked and Marinated']">
+
+                <div class="col-12-xs col-12-sm col-6-md col-3-lg col-3-xl prodCard pointer">
+
+                    <!-- Code to have popup appear -->
+                    <!-- Code to display card component and Inject product data into it -->
+                    <app-card (click)="this.hud.popUpRoute(products.productID)" [data]="products"></app-card>
+
+                    <!-- HTML code based on if product is in users wishlist -->
+                    <ng-container *ngIf="wishCheck(products.productID, vm.wishProducts.data), else wishBase">
+                        <div (click)="removeWish(products.productID)" class="wishBut active"></div>
+                    </ng-container>
+
+                    <ng-template #wishBase>
+                        <div (click)="addWish(products.productID)" class="wishBut unactive"></div>
+                    </ng-template>
+
+                </div>
+
+            </ng-container>
+
+            <!-- Sauces and Spices items -->
+            <h1 class="col-12 h1-mt" #SS>Sauces and Spices | {{vm.branch.data.branchName}}</h1>
+
+            <!-- Displaying every product individually that is in selective category -->
+            <ng-container *ngFor="let products of vm.products.data['Sauces and Spices']">
+                <div class="col-12-xs col-12-sm col-6-md col-3-lg col-3-xl prodCard pointer">
+
+                    <!-- Code to have popup appear -->
+                    <!-- Code to display card component and Inject product data into it -->
+                    <app-card (click)="this.hud.popUpRoute(products.productID)" [data]="products"></app-card>
+
+                    <!-- HTML code based on if product is in users wishlist -->
+                    <ng-container *ngIf="wishCheck(products.productID, vm.wishProducts.data), else wishBase">
+                        <div (click)="removeWish(products.productID)" class="wishBut active"></div>
+                    </ng-container>
+
+                    <ng-template #wishBase>
+                        <div (click)="addWish(products.productID)" class="wishBut unactive"></div>
+                    </ng-template>
+
+                </div>
+            </ng-container>
+
+            <!-- Spit Braai Hire items -->
+            <h1 class="col-12 h1-mt" #SB>Spit Braai Hire | {{vm.branch.data.branchName}}</h1>
+
+            <!-- Displaying every product individually that is in selective category -->
+            <ng-container *ngFor="let products of vm.products.data['Spit Braai']">
+                <div class="col-12-xs col-12-sm col-6-md col-3-lg col-3-xl prodCard pointer">
+
+                    <!-- Code to have popup appear -->
+                    <!-- Code to display card component and Inject product data into it -->
+                    <app-card (click)="this.hud.popUpRoute(products.productID)" [data]="products"></app-card>
+
+                    <!-- HTML code based on if product is in users wishlist -->
+                    <ng-container *ngIf="wishCheck(products.productID, vm.wishProducts.data), else wishBase">
+                        <div (click)="removeWish(products.productID)" class="wishBut active"></div>
+                    </ng-container>
+
+                    <ng-template #wishBase>
+                        <div (click)="addWish(products.productID)" class="wishBut unactive"></div>
+                    </ng-template>
+
+                </div>
+            </ng-container>
+        </div>
+    </ng-template>
+</ng-container>
