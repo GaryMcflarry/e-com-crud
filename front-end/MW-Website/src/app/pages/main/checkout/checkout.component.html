@@ -6,7 +6,7 @@
     </div>
 
     <!-- Subscribing to observable to get products that is in user's cart -->
-    <ng-container *ngIf="userCart$ | async as cart">
+    <ng-container *ngIf="userCart$ | async as cart, else base">
         <div class="col-12-xs col-12-sm col-12-md col-6-lg col-6-xl grid productDivList noScroll">
 
             <!-- Loop for every product for the Observable -->
@@ -67,4 +67,9 @@
             <p class="text">R{{ getTotalAmount(cart, 0) | number: '1.2-2' }}</p>
         </div>
     </ng-container>
+
+    <ng-template #base>
+        <div class="grid col-12">
+            <h1 class="col-12 title" style="justify-self: center;">No Items!</h1>
+            <h1 class="col-12 title" style="justify-self: center;">Continue Shopping!</h1>
 </div>

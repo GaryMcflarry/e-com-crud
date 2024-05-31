@@ -5,13 +5,14 @@
   justify-content: center;
 }
 .cardImg {
-  height: 10rem;
-  width: 15rem;
+  height: 9rem;
+  width: 14rem;
 }
 .cardProductName {
   font-size: medium;
   font-weight: bold;
   color: grey;
+  margin: 0;
 }
 .cardText {
   font-weight: bold;

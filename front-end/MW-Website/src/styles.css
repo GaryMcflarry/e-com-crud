@@ -52,7 +52,8 @@ body {
 .prodCard {
   background-color: #ffffff;
   height: 30vh;
-  margin: 15px;
+  width: 18rem;
+  margin: 1rem;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
