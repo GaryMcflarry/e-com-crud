@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, map, switchMap, tap } from 'rxjs';
+import { BehaviorSubject, map, switchMap} from 'rxjs';
 import { HUDService } from 'src/app/services/hud.service';
 import { UserService } from 'src/app/services/user.service';
 import { WebRequestService } from 'src/app/services/web-request.service';

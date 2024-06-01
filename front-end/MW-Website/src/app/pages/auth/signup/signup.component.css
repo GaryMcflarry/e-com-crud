@@ -7,7 +7,7 @@
   justify-content: center;
   display: grid;
   align-self: center;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .signUpTitle {
@@ -76,7 +76,6 @@
       justify-self: center;
       font-size: large;
       font-weight: 500;
-      margin: 0;
     }
     .signUpTitle {
       justify-self: center;
@@ -102,7 +101,6 @@
       justify-self: center;
       font-size: large;
       font-weight: 500;
-      margin: 0;
     }
     .signUpTitle {
       justify-self: center;
@@ -128,7 +126,6 @@
       justify-self: center;
       font-size: large;
       font-weight: 500;
-      margin: 0;
     }
     .signUpTitle {
       justify-self: center;

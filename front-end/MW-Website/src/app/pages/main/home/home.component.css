@@ -1,6 +1,7 @@
 .sidePanel {
   position: fixed;
   top: 70px;
+  height: 100%;
 }
 .sideCard {
   height: 8rem;
@@ -44,7 +45,7 @@
   background-image: url("src/assets/images/SB H.png");
 }
 .sideCard-Mb {
-  margin-bottom: 3rem;
+  margin-bottom: 7vh;
 }
 
 /* ================================================================================= */
@@ -109,6 +110,19 @@
 
 /* ================================================================================= */
 
+.footerText {
+  color: white;
+}
+
+.footerHeader {
+  color: white;
+  font-weight: 500;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
 /************[XS]************/
 @media (min-width: 320px) and (max-width: 480px) {
   h1 {
@@ -118,7 +132,7 @@
   }
 
   .sideCard {
-    height: 8rem;
+    height: 13vh;
     width: 5rem;
     background-color: #ffffff;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
@@ -127,6 +141,10 @@
   .divSpace {
     margin-left: 90px;
     padding-top: 50px;
+  }
+
+  .noFooterLogo {
+    display: none;
   }
 }
 /************[SM]************/
@@ -139,7 +157,7 @@
   }
 
   .sideCard {
-    height: 8rem;
+    height: 13vh;
     width: 5rem;
     background-color: #ffffff;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
@@ -148,6 +166,10 @@
   .divSpace {
     margin-left: 90px;
     padding-top: 50px;
+  }
+
+  .noFooterLogo {
+    display: none;
   }
 }
 /************[MD]************/
@@ -160,7 +182,7 @@
   }
 
   .sideCard {
-    height: 8rem;
+    height: 13vh;
     width: 6rem;
     background-color: #ffffff;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
@@ -169,6 +191,10 @@
   .divSpace {
     margin-left: 110px;
     padding-top: 50px;
+  }
+
+  .noFooterLogo {
+    display: none;
   }
 }
 /************[LG]************/
@@ -181,7 +207,7 @@
   }
 
   .sideCard {
-    height: 8rem;
+    height: 13vh;
     width: 6rem;
     background-color: #ffffff;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
@@ -202,7 +228,7 @@
   }
 
   .sideCard {
-    height: 8rem;
+    height: 13vh;
     width: 6rem;
     background-color: #ffffff;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);

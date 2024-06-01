@@ -74,13 +74,13 @@ export class HomeComponent {
 
   //Routing to base home page from the deal page
   routeToBase() {
-    this.router.navigate(['main/home/1']);
+    this.router.navigate([`main/home/${this.U.getToken().branchID}`]);
   }
 
   //Allows for routing to specified deal page
   routeToDeals(type: string) {
     this.hud.deal = type;
-    this.router.navigate([`main/home/deals/${this.hud.deal}/1`]);
+    this.router.navigate([`main/home/deals/${this.hud.deal}/${this.U.getToken().branchID}`]);
   }
 
   //function to add wish item into users wishlist, sent to hud service function

@@ -28,7 +28,7 @@ export class ProfileComponent {
 
   //To route to the home page
   routeToHome() {
-    this.router.navigate(['main/home']);
+    this.router.navigate([`main/home/${this.user.getToken().branchID}`]);
   }
 
   //To open the update account dialog

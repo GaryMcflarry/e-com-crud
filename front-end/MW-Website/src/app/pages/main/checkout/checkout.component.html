@@ -18,22 +18,42 @@
                         <p class="textL">{{product.data.name}}</p>
                         <p class="greyTextS">{{product.data.quantity}} in Stock</p>
                     </div>
-                    <div class="col-2 col-3-xs productPanel eachDiv">
-                        <p class="text">Each:</p>
-                        <p class="text">R {{product.data.price}}</p>
-                    </div>
-                    <div class="col-2 col-3-xs productPanel pointer">
-                        <p class="text">Quantity:</p>
-                        <input [(ngModel)]="orderQuantity[i]" type="number" min="1" placeholder="+">
-                    </div>
-                    <div class="col-2 productPanel">
-                        <p class="text">Total:</p>
-                        <p class="text">R{{totalCalculate(product.data.price, orderQuantity[i]) | number: '1.2-2'}}</p>
-                        <div>
-                            <button class="productBut pointer"
-                                (click)="removeCartItem(product.data.productID)">Remove</button>
+                    <ng-container *ngIf="product.data.discount !== '0', else priceBase">
+                        <div class="col-2 col-3-xs productPanel eachDiv">
+                            <p class="text">Each:</p>
+                            <p class="text">R {{product.data.newPrice | number: '1.2-2'}}</p>
                         </div>
-                    </div>
+                        <div class="col-2 col-3-xs productPanel pointer">
+                            <p class="text">Quantity:</p>
+                            <input [(ngModel)]="orderQuantity[i]" type="number" min="1" placeholder="+">
+                        </div>
+                        <div class="col-2 productPanel">
+                            <p class="text">Total:</p>
+                            <p class="text">R{{totalCalculate(product.data.newPrice, orderQuantity[i]) | number: '1.2-2'}}</p>
+                            <div>
+                                <button class="productBut pointer"
+                                    (click)="removeCartItem(product.data.productID)">Remove</button>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-template #priceBase>
+                        <div class="col-2 col-3-xs productPanel eachDiv">
+                            <p class="text">Each:</p>
+                            <p class="text">R {{product.data.price}}</p>
+                        </div>
+                        <div class="col-2 col-3-xs productPanel pointer">
+                            <p class="text">Quantity:</p>
+                            <input [(ngModel)]="orderQuantity[i]" type="number" min="1" placeholder="+">
+                        </div>
+                        <div class="col-2 productPanel">
+                            <p class="text">Total:</p>
+                            <p class="text">R{{totalCalculate(product.data.price, orderQuantity[i]) | number: '1.2-2'}}</p>
+                            <div>
+                                <button class="productBut pointer"
+                                    (click)="removeCartItem(product.data.productID)">Remove</button>
+                            </div>
+                        </div>
+                    </ng-template>
                 </div>
             </ng-container>
         </div>

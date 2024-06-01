@@ -38,6 +38,8 @@ export class CheckoutComponent {
           const productObservables = cartData.data.map((element: any) => {
             return this.web.post('product', element).pipe(
               map((data: any) => {
+                data.data.newPrice =
+                  data.data.price * (1 - data.data.discount / 100);
                 return data;
               })
             );
@@ -69,11 +71,19 @@ export class CheckoutComponent {
   getTotalAmount(cart: any[], index: number) {
     let total = 0;
     for (const product of cart) {
-      total += this.totalCalculate(
-        product.data.price,
-        this.orderQuantity[index]
-      );
-      index++;
+      if (product.data.discount) {
+        total += this.totalCalculate(
+          product.data.newPrice,
+          this.orderQuantity[index]
+        );
+        index++;
+      } else {
+        total += this.totalCalculate(
+          product.data.price,
+          this.orderQuantity[index]
+        );
+        index++;
+      }
     }
     return total;
   }

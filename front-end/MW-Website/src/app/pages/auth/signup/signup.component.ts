@@ -36,7 +36,7 @@ export class SignupComponent {
       this.formValues = {
       username : this.username,
       password : this.password,
-      contact : this.password,
+      contact : this.contact,
       admin : "false",
       chosenBranch : this.branch,
     }}

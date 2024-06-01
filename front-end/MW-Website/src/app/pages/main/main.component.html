@@ -26,12 +26,12 @@
 
             <!-- detemining if current user is admin or not -->
             <ng-container *ngIf="admin == 'true', else profilebase">
-                <div class="profileLogo admin pointer" (click)="account()">
+                <div class="profileLogo admin pointer" (click)="this.hud.account()">
                     <h1>{{iconName}}</h1>
                 </div>
             </ng-container>
             <ng-template #profilebase>
-                <div class="profileLogo user pointer" (click)="account()">
+                <div class="profileLogo user pointer" (click)="this.hud.account()">
                     <h1>{{iconName}}</h1>
                 </div>
             </ng-template>
@@ -39,13 +39,13 @@
 
         <!-- home button or checkout button depending on the current page  -->
         <ng-container *ngIf="!this.hud.isHomeRoute(), else base">
-            <div (click)="home()" class="cell center cartDiv"
+            <div (click)="this.hud.home()" class="cell center cartDiv"
                 [ngClass]="{'col-1': hud.topBarBg || hud.mobileL , 'col-2': hud.mobileP || hud.tabletP}">
                 <i class="pi pi-home icon pointer"></i>
             </div>
         </ng-container>
         <ng-template #base>
-            <div (click)="checkout()" class="cell center cartDiv"
+            <div (click)="this.hud.checkout()" class="cell center cartDiv"
                 [ngClass]="{'col-1': hud.topBarBg || hud.mobileL , 'col-2': hud.mobileP || hud.tabletP}">
                 <i class="pi pi-shopping-cart icon pointer"></i>
             </div>
@@ -73,19 +73,19 @@
             <!-- button to route to profile -->
             <div>
                 <ng-container *ngIf="!this.hud.isProfileRoute()">
-                    <button class="button-primary drawerButton col-12" (click)="account()"><i
+                    <button class="button-primary drawerButton col-12" (click)="this.hud.account()"><i
                             class="pi pi-user icon pointer"></i></button>
                 </ng-container>
 
             <!-- button to route to home -->
                 <ng-container *ngIf="!this.hud.isHomeRoute()">
-                    <button class="button-primary drawerButton col-12" (click)="home()"><i
+                    <button class="button-primary drawerButton col-12" (click)="this.hud.home()"><i
                             class="pi pi-home icon pointer"></i></button>
                 </ng-container>
 
             <!-- button to route to manage -->
                 <ng-container *ngIf="admin == 'true' && !this.hud.isManageRoute()">
-                    <button class="button-primary drawerButton col-12" (click)="manage()"><i
+                    <button class="button-primary drawerButton col-12" (click)="this.hud.manage()"><i
                             class="pi pi-cog icon pointer"></i></button>
                 </ng-container>
             <!-- button to log off -->

@@ -23,7 +23,6 @@ export class HUDService {
     public dialog: MatDialog,
     private user: UserService
   ) {
-
     //Observable for determining the current size of the screen and publishing variables that can be used
     //all over the website
     this.breakpointObserver
@@ -76,6 +75,26 @@ export class HUDService {
   parts = this.url.split('/');
   input = this.parts[6];
   deal: any;
+
+  //Route to manage page
+  manage() {
+    this.router.navigate(['main/manage']);
+  }
+
+  //Route to check out page
+  checkout() {
+    this.router.navigate(['main/checkout']);
+  }
+
+  //route to home page
+  home() {
+    this.router.navigate([`main/home/${this.user.getToken().branchID}`]);
+  }
+
+  //route to account page
+  account() {
+    this.router.navigate(['main/profile']);
+  }
 
   //Checking if in the deal page
   isDealsRoute() {
@@ -162,7 +181,7 @@ export class HUDService {
           detail: response.message,
         });
         this.store.setItem('Token', response.token);
-        this.router.navigate(['/main/home/1']);
+        this.router.navigate([`/main/home/${this.user.getToken().branchID}`]);
       });
   }
 

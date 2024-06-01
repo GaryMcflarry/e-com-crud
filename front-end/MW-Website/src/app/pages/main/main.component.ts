@@ -35,7 +35,6 @@ export class MainComponent {
     switchMap((data: any) => {
       return this.hud.searchProducts_(data).pipe(
         map((data: any) => {
-          console.log(data);
           if (data.data.length === 0) {
             return {
               data: data,
@@ -61,25 +60,6 @@ export class MainComponent {
     this.hud.logOff();
   }
 
-  //Route to manage page
-  manage() {
-    this.router.navigate(['main/manage']);
-  }
-
-  //Route to check out page
-  checkout() {
-    this.router.navigate(['main/checkout']);
-  }
-
-  //route to home page
-  home() {
-    this.router.navigate(['main/home/1']);
-  }
-
-  //route to account page
-  account() {
-    this.router.navigate(['main/profile']);
-  }
 
   //To clear the search bar
   clearSearch() {
